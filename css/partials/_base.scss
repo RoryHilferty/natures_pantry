@@ -1,0 +1,19 @@
+// reset some default styling
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	background: none;
+	border: none;
+
+	&,
+	::before,
+	::after {
+		box-sizing: border-box;
+	}
+}
+
+// colors
+$primary: #3fc208;
+$header: #1c1929;
+$subtext: #534e69;
