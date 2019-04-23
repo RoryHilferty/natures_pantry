@@ -1,6 +1,12 @@
-// reset some default styling, variables and mixins
-@import 'base';
+@import 'partials/base';
+@import 'partials/components';
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
 
 body {
-	color: $primary;
+	font-family: $font-stack;
 }
