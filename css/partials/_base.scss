@@ -5,6 +5,7 @@
 	outline: 0;
 	background: none;
 	border: none;
+	-webkit-tap-highlight-color: transparent;
 
 	&,
 	::before,
@@ -16,4 +17,8 @@
 // colors
 $primary: #3fc208;
 $header: #1c1929;
-$subtext: #534e69;
+$sub-text: #534e69;
+
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600');
+$font-stack: 'Montserrat', arial, sans-serif;
