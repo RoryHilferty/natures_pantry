@@ -1,0 +1,59 @@
+// mobile nav
+.mobile-nav {
+	width: 100%;
+	padding: 1.5rem;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	.burger-wrapper {
+		display: inline-block;
+		padding: 10px 0;
+		cursor: pointer;
+
+		.burger-line {
+			width: 1.5rem;
+			height: 0.1rem;
+			background-color: $primary;
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				width: 1.5rem;
+				height: 0.1rem;
+				background-color: $primary;
+				display: block;
+			}
+
+			&::before {
+				margin: -0.4rem 0;
+			}
+
+			&::after {
+				margin: 0.4rem 0;
+			}
+		}
+	}
+}
+
+// logo + brand name
+
+.logo-wrapper {
+	width: 100%;
+	text-align: center;
+	// border: 1px solid red;
+
+	img {
+		width: 2.5rem;
+	}
+
+	h2 {
+		margin-top: 0.5rem;
+		color: $primary;
+		text-transform: uppercase;
+		font-weight: 400;
+		font-size: 1.25rem;
+		letter-spacing: 0.1rem;
+	}
+}
