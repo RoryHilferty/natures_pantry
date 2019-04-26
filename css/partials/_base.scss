@@ -18,6 +18,7 @@ html,
 body {
 	width: 100%;
 	height: 100vh;
+	scroll-behavior: smooth;
 }
 
 // colors
@@ -74,5 +75,13 @@ $sm: 700px;
 
 	@include breakpoint(2000px) {
 		padding: 0 25rem;
+	}
+}
+
+@mixin link-hover {
+	transition: color 200ms linear;
+
+	&:hover {
+		color: $primary;
 	}
 }

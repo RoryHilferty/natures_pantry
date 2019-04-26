@@ -15,7 +15,6 @@
 .burger-wrapper {
 	display: inline-block;
 	padding: 10px 0;
-	cursor: pointer;
 	z-index: 999;
 
 	.burger-line {
@@ -151,14 +150,10 @@ body.no-scroll {
 		text-decoration: none;
 		color: $header;
 		text-transform: uppercase;
-		transition: color 200ms linear;
 		font-size: 0.8rem;
+		@include link-hover;
 
 		&.active {
-			color: $primary;
-		}
-
-		&:hover {
 			color: $primary;
 		}
 	}
@@ -228,15 +223,24 @@ body.no-scroll {
 		justify-content: center;
 		align-items: center;
 		color: $sub-text;
-		font-size: 0.8rem;
+		font-size: 0.5rem;
+
+		@include breakpoint($sm) {
+			font-size: 0.8rem;
+		}
 	}
 
 	li:not(:last-child) {
-		margin-right: 3rem;
+		margin-right: 1.5rem;
+
+		@include breakpoint($sm) {
+			margin-right: 3rem;
+		}
 	}
 
 	a {
 		text-decoration: none;
 		color: $sub-text;
+		@include link-hover;
 	}
 }
