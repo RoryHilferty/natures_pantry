@@ -6,9 +6,11 @@ body {
 	overflow: visible;
 }
 
-.main-wrapper {
-	margin-top: 3rem;
-	padding: 0 1.5rem;
+.main-content {
+	height: unset;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	padding-top: 200px;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 2rem;
@@ -16,8 +18,11 @@ body {
 	@include padding;
 
 	@include breakpoint($sm) {
+		height: 100vh;
+		padding-top: 170px;
 		grid-template-columns: repeat(2, 1fr);
-		margin-top: 0;
+		padding-bottom: 3rem;
+		margin-bottom: -3rem;
 	}
 }
 
@@ -39,7 +44,6 @@ body {
 }
 
 .image-wrapper {
-	// text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
