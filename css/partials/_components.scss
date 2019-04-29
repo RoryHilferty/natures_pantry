@@ -190,6 +190,24 @@ body.no-scroll {
 	}
 }
 
+// section
+.section {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	h1 {
+		@include title;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		@include paragraph;
+		margin-bottom: 1rem;
+	}
+}
+
 // button
 .btn {
 	text-decoration: none;
