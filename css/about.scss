@@ -14,12 +14,13 @@ body {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-gap: 2rem;
+	grid-template-areas: 'section1' 'image1' 'section2' 'image2' 'section3' 'image3';
 
 	@include padding;
 
 	@include breakpoint($sm) {
-		height: 100vh;
-		padding-top: 170px;
+		grid-template-areas: 'section1 image1' 'image2 section2' 'section3 image3';
+		padding-top: 250px;
 		grid-template-columns: repeat(2, 1fr);
 		padding-bottom: 3rem;
 		margin-bottom: -3rem;
@@ -34,4 +35,28 @@ body {
 	img {
 		width: 80%;
 	}
+}
+
+.s1 {
+	grid-area: section1;
+}
+
+.s2 {
+	grid-area: section2;
+}
+
+.s3 {
+	grid-area: section3;
+}
+
+.i1 {
+	grid-area: image1;
+}
+
+.i2 {
+	grid-area: image2;
+}
+
+.i3 {
+	grid-area: image3;
 }
