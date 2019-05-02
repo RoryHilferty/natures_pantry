@@ -56,6 +56,7 @@
 	}
 }
 
+// nav menu when opened
 .mobile-nav-menu {
 	position: fixed;
 	top: 0;
@@ -94,6 +95,7 @@
 	}
 }
 
+// disable scroll when nav is opened
 body.no-scroll {
 	overflow: hidden;
 }
@@ -208,6 +210,21 @@ body.no-scroll {
 	}
 }
 
+// image wrapper
+.image-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		width: 80%;
+
+		@include breakpoint(1800px) {
+			width: 500px;
+		}
+	}
+}
+
 // button
 .btn {
 	text-decoration: none;
@@ -228,14 +245,15 @@ body.no-scroll {
 }
 
 // footer
+// container makes sure footer always stays at bottom of page
 .page-content {
 	min-height: 100vh;
-	margin-bottom: -3rem;
+	margin-bottom: -3rem; // height of footer
 
 	&::after {
 		content: '';
 		display: block;
-		height: 3rem;
+		height: 3rem; // height of footer
 	}
 }
 
