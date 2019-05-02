@@ -1,0 +1,93 @@
+@import 'partials/base';
+@import 'partials/components';
+
+body {
+	font-family: $font-stack;
+	overflow: visible;
+}
+
+.main-content {
+	height: unset;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	padding-top: 200px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 2rem;
+	grid-template-areas: 'section1' 'image1' 'section2' 'image2' 'free-sample';
+
+	@include padding;
+
+	@include breakpoint($sm) {
+		grid-template-areas: 'image1 section1' 'section2 image2' 'free-sample free-sample';
+		padding-top: 250px;
+		grid-template-columns: repeat(2, 1fr);
+		padding-bottom: 3rem;
+		margin-bottom: -3rem;
+	}
+}
+
+.s1 {
+	grid-area: section1;
+}
+
+.s2 {
+	grid-area: section2;
+}
+
+.s3 {
+	grid-area: section3;
+}
+
+.i1 {
+	grid-area: image1;
+}
+
+.i2 {
+	grid-area: image2;
+}
+
+.i3 {
+	grid-area: image3;
+}
+
+.free-sample {
+	width: 100%;
+	padding-top: 0;
+	padding-bottom: 4rem;
+	grid-area: free-sample;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	h1 {
+		@include title;
+		margin-bottom: 1rem;
+	}
+
+	p {
+		@include paragraph;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+
+	a {
+		border: 1px solid #4d4f7580;
+		padding: 1rem 3rem;
+		text-decoration: none;
+		color: $header;
+		transition: border 200ms linear;
+
+		&:hover {
+			border: 1px solid #4d4f75;
+		}
+	}
+
+	@include breakpoint($sm) {
+		width: 75%;
+		padding-top: 8rem;
+		padding-bottom: 12rem;
+	}
+}
