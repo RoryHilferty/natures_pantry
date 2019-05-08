@@ -25,3 +25,76 @@ body {
 		margin-bottom: -3rem;
 	}
 }
+
+.section {
+	.bold {
+		font-weight: 500;
+		margin-top: 1rem;
+	}
+
+	span {
+		margin-top: 0.5rem;
+	}
+
+	span:not(:first-child) {
+		color: $sub-text;
+	}
+}
+
+form {
+	display: flex;
+	justify-content: center;
+}
+
+.contact-form {
+	width: 100%;
+	height: 100%;
+	margin: 2rem auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	@include breakpoint($sm) {
+		margin: 0;
+		width: 80%;
+	}
+
+	label {
+		font-weight: 500;
+	}
+
+	input,
+	textarea {
+		width: 100%;
+		border-bottom: 1px solid $header;
+		padding: 0.5rem 0;
+		font-size: 1rem;
+		font-family: $font-stack;
+		margin-bottom: 1.5rem;
+	}
+
+	textarea {
+		resize: none;
+	}
+
+	button {
+		text-align: left;
+		cursor: pointer;
+		font-family: $font-stack;
+		color: $primary;
+		font-size: 1rem;
+
+		img {
+			width: 1rem;
+			transform: translateY(0.1rem);
+			margin-left: 5px;
+			transition: margin-left 200ms ease-out;
+		}
+
+		&:hover {
+			img {
+				margin-left: 15px;
+			}
+		}
+	}
+}
