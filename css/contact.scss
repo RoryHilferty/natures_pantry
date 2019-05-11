@@ -30,13 +30,11 @@ body {
 	.bold {
 		font-weight: 500;
 		margin-top: 1rem;
+		color: $header;
 	}
 
 	span {
 		margin-top: 0.5rem;
-	}
-
-	span:not(:first-child) {
 		color: $sub-text;
 	}
 }
