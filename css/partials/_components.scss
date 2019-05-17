@@ -219,8 +219,12 @@ body.no-scroll {
 	img {
 		width: 80%;
 
+		@include breakpoint(1400px) {
+			width: 70%;
+		}
+
 		@include breakpoint(1800px) {
-			width: 500px;
+			width: 400px;
 		}
 	}
 }
